@@ -1,17 +1,19 @@
 import { AsideBarComponent } from './aside-bar/aside-bar.component';
 import { AsideGroupMenuComponent } from './aside-group-menu/aside-group-menu.component';
 import { AsideMenuComponent } from './aside-menu/aside-menu.component';
+import { AvatarComponent } from './avatar/avatar.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { CommonModule } from '@angular/common';
 import { FabButtonComponent } from './fab-button/fab-button.component';
+import { IconIdentifierComponent } from './icon-identifier/icon-identifier.component';
 import { IconsModule } from '../icons/icons.module';
+import { ItemComponent } from './item/item.component';
+import { LabelComponent } from './label/label.component';
+import { ListComponent } from './list/list.component';
 import { LogoComponent } from './logo/logo.component';
+import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { UserMinimalInfosComponent } from './user-minimal-infos/user-minimal-infos.component';
-import { AvatarComponent } from './avatar/avatar.component';
-import { ListComponent } from './list/list.component';
-import { ItemComponent } from './item/item.component';
-import { IconIdentifierComponent } from './icon-identifier/icon-identifier.component';
-import { LabelComponent } from './label/label.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,9 @@ import { LabelComponent } from './label/label.component';
     ItemComponent,
     IconIdentifierComponent,
     LabelComponent,
+    BarChartComponent,
   ],
-  imports: [CommonModule, IconsModule],
+  imports: [CommonModule, IconsModule, NgChartsModule],
   exports: [AsideBarComponent, AsideMenuComponent],
 })
 export class ComponentsModule {}
