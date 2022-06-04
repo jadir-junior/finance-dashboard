@@ -1,0 +1,11 @@
+.wrapper-avatar {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #fc6b21;
+  display: flex;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
