@@ -8,6 +8,10 @@ import { LogoComponent } from './logo/logo.component';
 import { NgModule } from '@angular/core';
 import { UserMinimalInfosComponent } from './user-minimal-infos/user-minimal-infos.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { ListComponent } from './list/list.component';
+import { ItemComponent } from './item/item.component';
+import { IconIdentifierComponent } from './icon-identifier/icon-identifier.component';
+import { LabelComponent } from './label/label.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { AvatarComponent } from './avatar/avatar.component';
     AsideMenuComponent,
     UserMinimalInfosComponent,
     AvatarComponent,
+    ListComponent,
+    ItemComponent,
+    IconIdentifierComponent,
+    LabelComponent,
   ],
   imports: [CommonModule, IconsModule],
   exports: [AsideBarComponent, AsideMenuComponent],
