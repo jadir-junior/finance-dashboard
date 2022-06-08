@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'fin-avatar',
   template: `
     <div class="avatar">
-      <img src="assets/imgs/avatar-shakir.png" alt="" />
+      <img [src]="photo" [alt]="name" />
     </div>
   `,
   styles: [
@@ -22,4 +22,7 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class AvatarComponent {}
+export class AvatarComponent {
+  @Input() photo!: string;
+  @Input() name!: string;
+}

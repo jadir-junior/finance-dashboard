@@ -1,4 +1,9 @@
-<fin-user-minimal-infos></fin-user-minimal-infos>
+<fin-user-minimal-infos
+  *ngIf="user"
+  [name]="user.name"
+  [createdAt]="user.createdAt"
+  [photo]="user.photo"
+></fin-user-minimal-infos>
 <div style="margin-top: 48px">
   <fin-list>
     <fin-item>
