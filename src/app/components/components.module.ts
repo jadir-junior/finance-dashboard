@@ -16,6 +16,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { TimeagoModule } from 'ngx-timeago';
 import { UserMinimalInfosComponent } from './user-minimal-infos/user-minimal-infos.component';
+import { ListHeaderComponent } from './list/list-header.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UserMinimalInfosComponent } from './user-minimal-infos/user-minimal-inf
     LabelComponent,
     BarChartComponent,
     AvatarCircleComponent,
+    ListHeaderComponent,
   ],
   imports: [CommonModule, IconsModule, NgChartsModule, TimeagoModule],
   exports: [AsideBarComponent, AsideMenuComponent],
