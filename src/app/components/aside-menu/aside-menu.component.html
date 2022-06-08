@@ -6,33 +6,26 @@
 ></fin-user-minimal-infos>
 <div style="margin-top: 48px">
   <fin-list>
-    <fin-item>
-      <fin-icon-identifier icon="adjust" color="#FC6B21"></fin-icon-identifier>
+    <fin-item *ngFor="let menuItem of menuItems">
+      <fin-icon-identifier [icon]="menuItem.icon" [color]="menuItem.color">
+      </fin-icon-identifier>
       <fin-label size="large" color="gray" style="margin-left: 20px">
-        Goals
+        {{ menuItem.label }}
       </fin-label>
-      <fin-fab-button icon="keyboard_arrow_right" end></fin-fab-button>
-    </fin-item>
-    <fin-item style="margin: 16px 0">
-      <fin-icon-identifier
-        icon="calendar_today"
-        color="#5531FB"
-      ></fin-icon-identifier>
-      <fin-label size="large" color="gray" style="margin-left: 20px">
-        Monthly Plan
-      </fin-label>
-      <fin-fab-button icon="keyboard_arrow_right" end></fin-fab-button>
-    </fin-item>
-    <fin-item>
-      <fin-icon-identifier
-        icon="settings"
-        color="#1FB9FC"
-      ></fin-icon-identifier>
-      <fin-label size="large" color="gray" style="margin-left: 20px">
-        Settings
-      </fin-label>
-      <fin-fab-button icon="keyboard_arrow_right" end></fin-fab-button>
+      <fin-fab-button
+        [radius]="18"
+        icon="keyboard_arrow_right"
+        end
+      ></fin-fab-button>
     </fin-item>
   </fin-list>
 </div>
 <fin-bar-chart></fin-bar-chart>
+<div>
+  <fin-list>
+    <fin-list-header>
+      <fin-label size="small">Today</fin-label>
+    </fin-list-header>
+    <fin-item> </fin-item>
+  </fin-list>
+</div>

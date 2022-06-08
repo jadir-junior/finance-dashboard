@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'fin-label',
@@ -38,6 +38,7 @@ import { Component, Input } from '@angular/core';
       }
     `,
   ],
+  encapsulation: ViewEncapsulation.None,
 })
 export class LabelComponent {
   @Input() size: 'small' | 'default' | 'large' = 'default';

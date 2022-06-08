@@ -13,6 +13,7 @@ import { Component, Input } from '@angular/core';
         'size-default': size === 'default',
         'size-large': size === 'large'
       }"
+      [ngStyle]="{ 'border-radius': radius + 'px' }"
     >
       <span class="material-icons-outlined">{{ icon }}</span>
     </button>
@@ -70,4 +71,5 @@ export class FabButtonComponent {
   @Input() color: 'default' | 'primary' = 'default';
   @Input() shape: 'round' | 'chat' = 'round';
   @Input() size: 'small' | 'default' | 'large' = 'default';
+  @Input() radius!: number;
 }
