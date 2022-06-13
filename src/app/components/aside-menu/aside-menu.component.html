@@ -1,0 +1,32 @@
+<fin-user-minimal-infos
+  *ngIf="user"
+  [name]="user.name"
+  [createdAt]="user.createdAt"
+  [photo]="user.photo"
+></fin-user-minimal-infos>
+<div style="margin-top: 48px">
+  <fin-list>
+    <fin-item *ngFor="let menuItem of menuItems">
+      <fin-icon-identifier [icon]="menuItem.icon" [color]="menuItem.color">
+      </fin-icon-identifier>
+      <fin-label size="large" color="gray" style="margin-left: 20px">
+        {{ menuItem.label }}
+      </fin-label>
+      <fin-fab-button
+        [radius]="18"
+        icon="keyboard_arrow_right"
+        end
+      ></fin-fab-button>
+    </fin-item>
+  </fin-list>
+</div>
+<fin-bar-chart></fin-bar-chart>
+<div style="overflow: hidden">
+  <fin-list>
+    <fin-list-header>
+      <fin-label size="small">Today</fin-label>
+    </fin-list-header>
+
+    <fin-bill-item *ngFor="let bill of bills" [bill]="bill"></fin-bill-item>
+  </fin-list>
+</div>
