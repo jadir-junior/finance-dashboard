@@ -15,7 +15,6 @@ import { TimeagoModule } from 'ngx-timeago';
     NgChartsModule,
     TimeagoModule.forRoot(),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

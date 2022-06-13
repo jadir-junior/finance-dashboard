@@ -8,10 +8,6 @@ import { Component } from '@angular/core';
       :host {
         margin: 24px;
       }
-
-      fin-item {
-        margin: 16px 0;
-      }
     `,
   ],
 })

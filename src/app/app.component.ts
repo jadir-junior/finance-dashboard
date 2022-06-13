@@ -1,3 +1,4 @@
+import { BillsService } from './services/bills/bills.service';
 import { Component } from '@angular/core';
 import { UsersService } from './services/users/users.service';
 
@@ -7,6 +8,10 @@ import { UsersService } from './services/users/users.service';
 })
 export class AppComponent {
   user$ = this.usersService.user$;
+  bills$ = this.billsService.bills$;
 
-  constructor(private usersService: UsersService) {}
+  constructor(
+    private usersService: UsersService,
+    private billsService: BillsService
+  ) {}
 }

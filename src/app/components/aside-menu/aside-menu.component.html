@@ -21,11 +21,12 @@
   </fin-list>
 </div>
 <fin-bar-chart></fin-bar-chart>
-<div>
+<div style="overflow: hidden">
   <fin-list>
     <fin-list-header>
       <fin-label size="small">Today</fin-label>
     </fin-list-header>
-    <fin-item> </fin-item>
+
+    <fin-bill-item *ngFor="let bill of bills" [bill]="bill"></fin-bill-item>
   </fin-list>
 </div>

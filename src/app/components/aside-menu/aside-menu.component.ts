@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { IBill } from 'src/app/services/bills/bills.service';
 import { IUser } from 'src/app/services/users/users.service';
 
 interface IMenuItem {
@@ -40,4 +41,5 @@ export class AsideMenuComponent {
   ];
 
   @Input() user!: IUser | null;
+  @Input() bills!: IBill[] | null;
 }

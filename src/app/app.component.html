@@ -1,4 +1,22 @@
 <div style="height: 100%; display: flex">
   <fin-aside-bar></fin-aside-bar>
-  <fin-aside-menu [user]="user$ | async"></fin-aside-menu>
+  <fin-aside-menu
+    [user]="user$ | async"
+    [bills]="bills$ | async"
+  ></fin-aside-menu>
+  <header>
+    <h1>
+      Welcome Back <span *ngIf="user$ | async as user">{{ user.name }}</span>
+      <fin-icon-button
+        [finDropdownTriggerFor]="dropdown"
+        icon="notifications"
+        [iconWidth]="32"
+      ></fin-icon-button>
+      <fin-dropdown #dropdown>
+        <div>CUT</div>
+        <div>COPY</div>
+        <div>PASTE</div>
+      </fin-dropdown>
+    </h1>
+  </header>
 </div>

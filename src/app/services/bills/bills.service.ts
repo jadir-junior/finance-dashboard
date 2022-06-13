@@ -9,6 +9,8 @@ export interface IBill {
   status: 'UNSUCCESSFULLY' | 'SUCCESSFULLY' | null;
   modality: 'DEBIT' | 'CREDIT';
   value: number;
+  color: string;
+  icon: string;
 }
 
 const bills: IBill[] = [
@@ -19,6 +21,8 @@ const bills: IBill[] = [
     status: 'UNSUCCESSFULLY',
     modality: 'DEBIT',
     value: 280,
+    color: '#3629B7',
+    icon: 'water_drop',
   },
   {
     date: new Date(),
@@ -27,6 +31,8 @@ const bills: IBill[] = [
     status: null,
     modality: 'CREDIT',
     value: 1200,
+    color: '#FF4267',
+    icon: 'credit_card',
   },
   {
     date: new Date(),
@@ -35,6 +41,8 @@ const bills: IBill[] = [
     status: 'SUCCESSFULLY',
     modality: 'DEBIT',
     value: 480,
+    color: '#0890FE',
+    icon: 'power',
   },
   {
     date: new Date(),
@@ -43,6 +51,8 @@ const bills: IBill[] = [
     status: null,
     modality: 'CREDIT',
     value: 500,
+    color: '#FFAF2A',
+    icon: 'payments',
   },
   {
     date: new Date(),
@@ -51,6 +61,8 @@ const bills: IBill[] = [
     status: 'SUCCESSFULLY',
     modality: 'DEBIT',
     value: 100,
+    color: '#52D5BA',
+    icon: 'wifi',
   },
 ];
 
